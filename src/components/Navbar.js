@@ -16,18 +16,7 @@ export default function Navbar(props) {
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">Movies</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {props.Text}
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="/">Japanese</a></li>
-            <li><a className="dropdown-item" href="/">English</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="/">Hindi</a></li>
-          </ul>
+          <a className="nav-link" href="/">{props.aboutText}</a>
         </li>
         
       </ul>
@@ -49,12 +38,12 @@ export default function Navbar(props) {
 
 Navbar.propTypes={
     title: PropTypes.string.isRequired,
-    Text: PropTypes.string.isRequired
+    aboutTextText: PropTypes.string.isRequired
 }
 
 //default if we dont give title and text
 
 // Navbar.defaultProps={
 //     title: "Title",
-//     Text: "Languages"
+//     Text: "About"
 // }
